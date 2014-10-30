@@ -62,4 +62,13 @@ Public Class Form1
     Private Sub DatabaseToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles DatabaseToolStripMenuItem.Click
         Form2.Visible = True
     End Sub
+
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+
+    End Sub
+
+    Private Sub NthFibonacciToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles NthFibonacciToolStripMenuItem.Click
+        Dim a As BigInteger = 10
+        fibRange(a)
+    End Sub
 End Class

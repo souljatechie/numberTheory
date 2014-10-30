@@ -27,13 +27,13 @@ Partial Class Form1
         Me.PrimeNumbersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SinglePrimeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrimeRangeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DatabaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FibonacciNumbersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NthFibonacciToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FibsUpnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.DatabaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -64,6 +64,12 @@ Partial Class Form1
         Me.PrimeRangeToolStripMenuItem.Name = "PrimeRangeToolStripMenuItem"
         Me.PrimeRangeToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.PrimeRangeToolStripMenuItem.Text = "Prime Range"
+        '
+        'DatabaseToolStripMenuItem
+        '
+        Me.DatabaseToolStripMenuItem.Name = "DatabaseToolStripMenuItem"
+        Me.DatabaseToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.DatabaseToolStripMenuItem.Text = "Database"
         '
         'FibonacciNumbersToolStripMenuItem
         '
@@ -112,12 +118,6 @@ Partial Class Form1
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "Populate Fibinnaci Database"
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'DatabaseToolStripMenuItem
-        '
-        Me.DatabaseToolStripMenuItem.Name = "DatabaseToolStripMenuItem"
-        Me.DatabaseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DatabaseToolStripMenuItem.Text = "Database"
         '
         'Form1
         '
