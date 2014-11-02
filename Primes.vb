@@ -7,6 +7,7 @@ Module Primes
     '        Return
     '    Next
     'End Sub
+    Dim PrimeRangeThread As New System.Threading.Thread(AddressOf Prime)
     Function Prime(ByVal singleNumber As BigInteger) As BigInteger
         Dim sqrt As BigInteger = Math.Sqrt(singleNumber)
         Dim a As BigInteger
@@ -39,6 +40,7 @@ Module Primes
             PrimeRange.primeBox.ScrollToCaret()
 
         End If
+        PrimeRangeThread.Abort()
         Return singleNumber
     End Function
 
