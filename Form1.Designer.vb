@@ -33,7 +33,6 @@ Partial Class Form1
         Me.FibsUpnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -103,28 +102,18 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(15, 115)
+        Me.Button1.Location = New System.Drawing.Point(111, 123)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(177, 41)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Populate Prime Database"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(218, 115)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(184, 41)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Populate Fibinnaci Database"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(414, 176)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -146,7 +135,6 @@ Partial Class Form1
     Friend WithEvents FibsUpnToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents DatabaseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

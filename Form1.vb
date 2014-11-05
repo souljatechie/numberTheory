@@ -63,12 +63,44 @@ Public Class Form1
         Form2.Visible = True
     End Sub
 
-    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs)
 
     End Sub
 
     Private Sub NthFibonacciToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles NthFibonacciToolStripMenuItem.Click
-        Dim a As BigInteger = 10
-        fibRange(a)
+
+        'fibRange(a)
+        Dim fibNthForm As New PrimeRange
+        Dim a As BigInteger
+        Dim b As BigInteger
+        Dim primeCanidate As BigInteger
+        Dim startNum As String
+        Dim endNum As String
+
+       
+
+        fibNthForm.Visible = True
+        startNum = fibNthForm.startNum.Text
+        endNum = fibNthForm.endNum.Text
+        Stop
+
+        While startNum IsNot Nothing And endNum IsNot Nothing
+            a = BigInteger.Parse(fibNthForm.startNum.Text)
+            b = BigInteger.Parse(fibNthForm.endNum.Text)
+            fibNthForm.primeBox.Clear()
+            fibNthForm.ProgressBar1.Maximum = b - a
+            fibNthForm.ProgressBar1.Value = 0
+            fibNthForm.Button1.Focus()
+            For c = a To b Step 1
+
+                primeCanidate = Prime(c)
+                fibNthForm.ProgressBar1.Increment(1)
+                'If primeCanidate > 0 Then
+                '    MessageBox.Show(primeCanidate.ToString + " is prime")
+                'End If
+
+            Next
+        End While
+        
     End Sub
 End Class

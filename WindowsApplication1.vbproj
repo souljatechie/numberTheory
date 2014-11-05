@@ -101,6 +101,12 @@
     <Compile Include="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FibNth.Designer.vb">
+      <DependentUpon>FibNth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FibNth.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PrimeDBDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FibNth.resx">
+      <DependentUpon>FibNth.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrimeRange.resx">
       <DependentUpon>PrimeRange.vb</DependentUpon>
