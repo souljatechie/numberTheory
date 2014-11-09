@@ -33,9 +33,11 @@ Public Class Form1
         Dim a As BigInteger
         Dim b As BigInteger
         Dim primeCanidate As BigInteger
-        For a = 2 To 2000 Step 1
-            primeCanidate = dbPrime(a)
+        ProgressBar1.Maximum = 20000
+        For a = 2 To 20000 Step 1
 
+            primeCanidate = dbPrime(a)
+            ProgressBar1.Increment(1)
             If primeCanidate > 0 Then
                 Dim con As New SqlConnection
                 Dim cmd As New SqlCommand
@@ -45,7 +47,7 @@ Public Class Form1
                     cmd.Connection = con
                     cmd.CommandText = "INSERT INTO primeTable(ID) VALUES(" + primeCanidate.ToString + ")"
                     cmd.ExecuteNonQuery()
-                    MessageBox.Show("added " + primeCanidate.ToString)
+                    'MessageBox.Show("added " + primeCanidate.ToString)
                 Catch ex As Exception
                     If ex.Message.Contains("Cannot insert duplicate key") = False Then
                         MessageBox.Show("Error while updating record on table..." & ex.Message, "Update Records")

@@ -1,13 +1,6 @@
 ﻿Imports System.Numerics
 Module Primes
 
-    'Sub Main()
-    '    Dim a As Integer
-    '    For a = 1 To 20 Step 1
-    '        Return
-    '    Next
-    'End Sub
-    Dim PrimeRangeThread As New System.Threading.Thread(AddressOf Prime)
     Function Prime(ByVal singleNumber As BigInteger) As BigInteger
         Dim sqrt As BigInteger = Math.Sqrt(singleNumber)
         Dim a As BigInteger
@@ -29,18 +22,14 @@ Module Primes
                 PrimeRange.Label3.Visible = True
                 PrimeRange.Label3.Text = ("Dividing " + singleNumber.ToString + " by " + a.ToString)
                 PrimeRange.Label3.Update()
-
                 If singleNumber Mod a = 0 Then
                     Exit Function
                 End If
-
             Next
             PrimeRange.primeBox.AppendText(singleNumber.ToString + ", ")
             PrimeRange.primeBox.Select(PrimeRange.primeBox.TextLength, 0)
             PrimeRange.primeBox.ScrollToCaret()
-
         End If
-        PrimeRangeThread.Abort()
         Return singleNumber
     End Function
 
@@ -60,6 +49,6 @@ Module Primes
         Next
         Return singleNumber
     End Function
-   
+
 
 End Module
