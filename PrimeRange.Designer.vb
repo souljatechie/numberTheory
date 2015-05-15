@@ -22,6 +22,7 @@ Partial Class PrimeRange
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.buttonGo = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.startNum = New System.Windows.Forms.TextBox()
@@ -36,7 +37,13 @@ Partial Class PrimeRange
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.NumberTheoryDataSet = New WindowsApplication1.NumberTheoryDataSet()
+        Me.PrimeTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PrimeTableTableAdapter = New WindowsApplication1.NumberTheoryDataSetTableAdapters.primeTableTableAdapter()
+        Me.TableAdapterManager = New WindowsApplication1.NumberTheoryDataSetTableAdapters.TableAdapterManager()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.NumberTheoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrimeTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'buttonGo
@@ -76,7 +83,7 @@ Partial Class PrimeRange
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PrimesToolStripMenuItem, Me.FibonacciNumbersToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(627, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(706, 24)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -143,18 +150,38 @@ Partial Class PrimeRange
         '
         Me.Label3.AutoSize = True
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label3.Location = New System.Drawing.Point(0, 351)
+        Me.Label3.Location = New System.Drawing.Point(0, 592)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(24, 13)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "text"
         Me.Label3.Visible = False
         '
+        'NumberTheoryDataSet
+        '
+        Me.NumberTheoryDataSet.DataSetName = "NumberTheoryDataSet"
+        Me.NumberTheoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PrimeTableBindingSource
+        '
+        Me.PrimeTableBindingSource.DataMember = "primeTable"
+        Me.PrimeTableBindingSource.DataSource = Me.NumberTheoryDataSet
+        '
+        'PrimeTableTableAdapter
+        '
+        Me.PrimeTableTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.primeTableTableAdapter = Me.PrimeTableTableAdapter
+        Me.TableAdapterManager.UpdateOrder = WindowsApplication1.NumberTheoryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'PrimeRange
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(627, 364)
+        Me.ClientSize = New System.Drawing.Size(706, 605)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
@@ -170,6 +197,8 @@ Partial Class PrimeRange
         Me.Text = "Prime Range Test"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.NumberTheoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrimeTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -188,4 +217,8 @@ Partial Class PrimeRange
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents NumberTheoryDataSet As WindowsApplication1.NumberTheoryDataSet
+    Friend WithEvents PrimeTableBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents PrimeTableTableAdapter As WindowsApplication1.NumberTheoryDataSetTableAdapters.primeTableTableAdapter
+    Friend WithEvents TableAdapterManager As WindowsApplication1.NumberTheoryDataSetTableAdapters.TableAdapterManager
 End Class

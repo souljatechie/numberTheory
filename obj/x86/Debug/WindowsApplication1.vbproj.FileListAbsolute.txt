@@ -39,3 +39,20 @@ C:\Users\burgesti\Documents\Visual Studio 2010\Projects\numberTheory\WindowsAppl
 C:\Users\burgesti\Documents\Visual Studio 2010\Projects\numberTheory\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Resources.resources
 C:\Users\burgesti\Documents\Visual Studio 2010\Projects\numberTheory\WindowsApplication1\obj\x86\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
 C:\Users\burgesti\Documents\Visual Studio 2010\Projects\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.FibNth.resources
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\bin\Debug\WindowsApplication1.exe.config
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\obj\x86\Debug\WindowsApplication1.exe
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\obj\x86\Debug\WindowsApplication1.xml
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\obj\x86\Debug\WindowsApplication1.pdb
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\bin\Debug\PrimeDB.mdf
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\bin\Debug\PrimeDB_log.ldf
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\bin\Debug\WindowsApplication1.exe
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\bin\Debug\WindowsApplication1.pdb
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\bin\Debug\WindowsApplication1.xml
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\obj\x86\Debug\WindowsApplication1.Form2.resources
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\obj\x86\Debug\WindowsApplication1.FibNth.resources
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\obj\x86\Debug\WindowsApplication1.PrimeRange.resources
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\obj\x86\Debug\WindowsApplication1.SinglePrime.resources
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\obj\x86\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\Redbeard\Downloads\numberTheory-master (1)\numberTheory-master\obj\x86\Debug\WindowsApplication1.Form3.resources

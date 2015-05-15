@@ -7,7 +7,7 @@ Public Class SinglePrime
 
         a = BigInteger.Parse(singleNum.Text)
 
-        primeCanidate = Prime(a)
+        primeCanidate = Form3.Prime(a)
 
         If primeCanidate > 0 Then
             MessageBox.Show(primeCanidate.ToString + " is prime")

@@ -107,6 +107,17 @@
     <Compile Include="FibNth.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NumberTheoryDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NumberTheoryDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PrimeDBDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +168,9 @@
     <EmbeddedResource Include="FibNth.resx">
       <DependentUpon>FibNth.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrimeRange.resx">
       <DependentUpon>PrimeRange.vb</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +194,17 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="NumberTheoryDataSet.xsc">
+      <DependentUpon>NumberTheoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NumberTheoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NumberTheoryDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NumberTheoryDataSet.xss">
+      <DependentUpon>NumberTheoryDataSet.xsd</DependentUpon>
     </None>
     <None Include="PrimeDBDataSet.xsc">
       <DependentUpon>PrimeDBDataSet.xsd</DependentUpon>

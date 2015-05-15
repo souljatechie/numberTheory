@@ -12,8 +12,8 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         CenterToScreen()
-        MessageBox.Show("*************************** Disclaimer ***************************" + Environment.NewLine + Environment.NewLine + "                  This program is still in early alpha stages" +
-                       Environment.NewLine + Environment.NewLine + "*************************** Disclaimer ***************************")
+        'MessageBox.Show("*************************** Disclaimer ***************************" + Environment.NewLine + Environment.NewLine + "                  This program is still in early alpha stages" +
+        '               Environment.NewLine + Environment.NewLine + "*************************** Disclaimer ***************************")
     End Sub
 
     Private Sub Form1_close() Handles Me.FormClosed
@@ -30,28 +30,39 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click_1(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+
         Dim a As BigInteger
         Dim b As BigInteger
+        Dim counter As BigInteger = 78498
         Dim primeCanidate As BigInteger
-        ProgressBar1.Maximum = 20000
-        For a = 2 To 20000 Step 1
 
-            primeCanidate = dbPrime(a)
+
+        ProgressBar1.Maximum = 100000
+        For a = 1000000 To 1100000 Step 1
+
+            primeCanidate = Form3.dbPrime(a)
             ProgressBar1.Increment(1)
+            'counter = counter + 1
             If primeCanidate > 0 Then
                 Dim con As New SqlConnection
                 Dim cmd As New SqlCommand
+
                 Try
-                    con.ConnectionString = "Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\burgesti\documents\visual studio 2010\Projects\WindowsApplication1\WindowsApplication1\PrimeDB.mdf;Integrated Security=True;User Instance=True"
+                    counter = counter + 1
+                    con.ConnectionString = "Data Source=REDWIZZARD\SQLEXPRESS;Initial Catalog=NumberTheory;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False"
                     con.Open()
                     cmd.Connection = con
-                    cmd.CommandText = "INSERT INTO primeTable(ID) VALUES(" + primeCanidate.ToString + ")"
+                    cmd.CommandText = "INSERT INTO primeTable(Position, PrimeNumber) VALUES(" + counter.ToString + "," + primeCanidate.ToString + ")"
                     cmd.ExecuteNonQuery()
+
                     'MessageBox.Show("added " + primeCanidate.ToString)
                 Catch ex As Exception
                     If ex.Message.Contains("Cannot insert duplicate key") = False Then
                         MessageBox.Show("Error while updating record on table..." & ex.Message, "Update Records")
                     End If
+                    'If ex.Message.Contains("Cannot insert duplicate key") = True Then
+                    '    MessageBox.Show("Error while updating record on table..." & ex.Message, "Update Records")
+                    'End If
                 Finally
 
                     con.Close()
@@ -62,7 +73,7 @@ Public Class Form1
     End Sub
 
     Private Sub DatabaseToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles DatabaseToolStripMenuItem.Click
-        Form2.Visible = True
+        Form3.Visible = True
     End Sub
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs)
@@ -95,7 +106,7 @@ Public Class Form1
             fibNthForm.Button1.Focus()
             For c = a To b Step 1
 
-                primeCanidate = Prime(c)
+                primeCanidate = Form3.Prime(c)
                 fibNthForm.ProgressBar1.Increment(1)
                 'If primeCanidate > 0 Then
                 '    MessageBox.Show(primeCanidate.ToString + " is prime")
